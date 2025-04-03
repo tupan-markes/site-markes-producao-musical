@@ -1,28 +1,28 @@
 'use client'
 
-import React from "react";
-import { Instagram, Youtube, Music2, Spotify, Phone, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Instagram, Youtube, Music2, Spotify, Phone, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 export default function TupanMarkesPage() {
   const reels = [
     {
-      link: "https://www.instagram.com/p/C2mRDK9s_FE/",
-      video: "/imagens/reels/tupan_markes/reel1.mp4",
+      link: 'https://www.instagram.com/p/C2mRDK9s_FE/',
+      video: '/imagens/reels/tupan_markes/reel1.mp4',
     },
     {
-      link: "https://www.instagram.com/p/CuXRQKEArL_/",
-      video: "/imagens/reels/tupan_markes/reel2.mp4",
+      link: 'https://www.instagram.com/p/CuXRQKEArL_/',
+      video: '/imagens/reels/tupan_markes/reel2.mp4',
     },
     {
-      link: "https://www.instagram.com/p/CnNewJxKraj/",
-      video: "/imagens/reels/tupan_markes/reel3.mp4",
+      link: 'https://www.instagram.com/p/CnNewJxKraj/',
+      video: '/imagens/reels/tupan_markes/reel3.mp4',
     },
     {
-      link: "https://www.instagram.com/p/CuPpcV8JaHJ/",
-      video: "/imagens/reels/tupan_markes/reel4.mp4",
+      link: 'https://www.instagram.com/p/CuPpcV8JaHJ/',
+      video: '/imagens/reels/tupan_markes/reel4.mp4',
     },
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
@@ -33,7 +33,7 @@ export default function TupanMarkesPage() {
           <div className="flex items-center gap-2 mb-2 md:mb-0">
             <div className="text-orange-500 text-3xl font-bold -mt-1">▶</div>
             <div className="flex flex-col leading-tight">
-              <span className="text-xl font-bold tracking-[0.35em]">MARKES</span>
+              <span className="text-xl font-bold tracking-[0.35em] md:tracking-[0.45em]">MARKES</span>
               <span className="text-sm text-gray-500 -mt-1 ml-1">Produção Musical</span>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function TupanMarkesPage() {
       </div>
 
       {/* TEXTO DESTAQUE */}
-      <div className="max-w-3xl mx-auto px-6 mb-10 text-justify">
+      <div className="max-w-3xl mx-auto px-4 mb-10 text-justify">
         <h2 className="text-orange-600 text-lg font-bold text-center mb-4">
           Tupan Markes é sinônimo de presença de palco, música boa e carisma!
         </h2>
@@ -93,7 +93,7 @@ export default function TupanMarkesPage() {
         </div>
       </div>
 
-      {/* YOUTUBE */}
+      {/* CLIPES */}
       <div className="max-w-6xl mx-auto px-4 mb-12">
         <h3 className="text-2xl font-semibold mb-4">Clipes no YouTube</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -142,12 +142,12 @@ export default function TupanMarkesPage() {
       {/* VOLTAR */}
       <div className="text-center pb-10">
         <Link
-          to="/"
+          href="/"
           className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg"
         >
           Voltar à página inicial
         </Link>
       </div>
     </div>
-  );
+  )
 }
