@@ -1,0 +1,8 @@
+# Evita enviar arquivos grandes ou desnecessários ao GitHub
+
+node_modules/
+.next/
+out/
+dist/
+.env
+.DS_Store
