@@ -15,7 +15,7 @@ export default function TupanMarkesPage() {
           <div className="flex items-center gap-2 justify-center sm:justify-start">
             <Play className="text-orange-500 w-8 h-8" />
             <div className="text-center sm:text-left">
-              <h1 className="text-2xl font-bold leading-none tracking-[0.4em] w-fit mx-auto sm:mx-0">MARKES</h1>
+              <h1 className="text-2xl font-bold leading-none tracking-[0.2em] w-fit mx-auto sm:mx-0">MARKES</h1>
               <span className="text-sm text-gray-500">Produção Musical</span>
             </div>
 
