@@ -47,7 +47,7 @@ export default function TupanMarkesPage() {
         />
 
         {/* Descrição */}
-        <p className="text-lg sm:text-xl text-gray-700 text-justify leading-relaxed max-w-5xl mx-auto mb-12 px-2">
+        <p className="text-lg sm:text-xl text-gray-700 text-justify leading-relaxed max-w-6xl mx-auto mb-12 px-2">
           <strong className="text-orange-600">Tupan Markes</strong> é sinônimo de presença de palco, música boa e carisma! Com um repertório eclético e um show pra cima que contagia o público do início ao fim, Tupan vem conquistando cada vez mais espaço na cena musical. Seu sucesso “Maria Fifi” já ultrapassou 300 mil players no Spotify, enquanto o Reels da música “Sentando no Colo do Pai” explodiu com mais de 1 milhão de visualizações no Instagram. Um artista completo, que mistura talento, versatilidade e energia em cada apresentação.
         </p>
 
