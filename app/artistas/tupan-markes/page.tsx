@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Phone, Mail, Instagram, Youtube } from 'lucide-react'
+import { Phone, Mail, Instagram, Youtube, Play } from 'lucide-react'
 import Link from 'next/link'
 
 export default function TupanMarkesPage() {
@@ -11,16 +11,19 @@ export default function TupanMarkesPage() {
 
         {/* Cabeçalho */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          {/* Logo e nome do artista */}
-          <div className="flex flex-col items-center sm:items-start">
-            <img
-              src="/imagens/logo/logo_markes_producao_musical.png"
-              alt="Logo Markes"
-              className="w-48 h-auto mb-2 mx-auto sm:mx-0"
-            />
-            <h1 className="text-3xl sm:text-4xl font-bold text-orange-600 mt-2 text-center sm:text-left">
-              Tupan Markes
-            </h1>
+          {/* Logo */}
+          <div className="flex items-center gap-2 justify-center sm:justify-start">
+            <Play className="text-orange-500 w-8 h-8" />
+            <div>
+              <h1 className="text-2xl font-bold leading-none">MARKES</h1>
+              <span className="text-sm text-gray-500">Produção Musical</span>
+            </div>
+          </div>
+
+          {/* Nome do artista */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-orange-600 text-center sm:text-left">
+            Tupan Markes
+          </h1>
 
           {/* Redes sociais */}
           <div className="flex justify-center sm:justify-end gap-4">
@@ -62,7 +65,7 @@ export default function TupanMarkesPage() {
               rel="noopener noreferrer"
             >
               <video
-                src={`/imagens/reels/tupan_markes/${reel}.mp4`}
+                src={/imagens/reels/tupan_markes/${reel}.mp4}
                 autoPlay
                 muted
                 loop
