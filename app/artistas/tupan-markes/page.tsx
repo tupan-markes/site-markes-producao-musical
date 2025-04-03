@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Phone, Mail, Instagram, Youtube, Music2 } from 'lucide-react'
+import { Phone, Mail, Instagram, Youtube, Music2, Play } from 'lucide-react'
 import Link from 'next/link'
 
 export default function TupanMarkesPage() {
@@ -9,15 +9,19 @@ export default function TupanMarkesPage() {
     <div className="min-h-screen bg-white text-gray-800">
       <div className="px-4 py-8 max-w-6xl mx-auto">
 
-        {/* Cabeçalho responsivo */}
+        {/* Cabeçalho */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
           {/* Logo */}
           <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <img src="/imagens/logo_branca.png" alt="Logo Markes" className="h-10" />
+            <Play className="text-orange-500 w-8 h-8" />
+            <div>
+              <h1 className="text-2xl font-bold leading-none">MARKES</h1>
+              <span className="text-sm text-gray-500">Produção Musical</span>
+            </div>
           </div>
 
-          {/* Nome */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-orange-600 text-center">
+          {/* Nome do artista */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-orange-600 text-center sm:text-left">
             Tupan Markes
           </h1>
 
