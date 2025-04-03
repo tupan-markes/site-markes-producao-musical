@@ -64,8 +64,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <header className="flex items-center justify-between p-4 shadow-md sticky top-0 bg-white z-50">
-        <div className="flex items-center gap-2">
+      <header className="flex flex-col md:flex-row items-center justify-between p-4 shadow-md sticky top-0 bg-white z-50 gap-2 text-center md:text-left">
+        <div className="flex items-center gap-2 justify-center md:justify-start">
           <Play className="text-orange-500 w-8 h-8" />
           <h1 className="text-2xl font-bold whitespace-nowrap">MARKES</h1>
           <span className="text-sm text-gray-500 whitespace-nowrap">Produção Musical</span>
