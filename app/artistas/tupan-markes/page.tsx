@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Phone, Mail, Instagram, Youtube, Music2, Play } from 'lucide-react'
+import { Phone, Mail, Instagram, Youtube, Play } from 'lucide-react'
 import Link from 'next/link'
 
 export default function TupanMarkesPage() {
@@ -9,9 +9,9 @@ export default function TupanMarkesPage() {
     <div className="min-h-screen bg-white text-gray-800">
       <div className="px-4 py-8 max-w-6xl mx-auto">
 
-        {/* Cabeçalho */}
+        {/* Cabeçalho com logo, nome e redes */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          {/* Logo */}
+          {/* Logo e empresa */}
           <div className="flex items-center gap-2 justify-center sm:justify-start">
             <Play className="text-orange-500 w-8 h-8" />
             <div>
@@ -34,7 +34,9 @@ export default function TupanMarkesPage() {
               <Youtube className="w-6 h-6" />
             </a>
             <a href="https://open.spotify.com/intl-pt/artist/5d4vrz2uodz6kGueGwABnJ" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800">
-              <Music2 className="w-6 h-6" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 496 512" fill="currentColor">
+                <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121 365c-4 6-11 8-17 4-47-29-106-36-176-20-7 1-14-3-16-10s3-14 10-16c78-18 144-10 198 24 6 4 8 11 4 18zm24-61c-5 8-15 10-22 5-53-33-133-43-196-24-9 3-18-2-21-11s2-18 11-21c75-22 164-12 227 28 8 5 10 15 5 23zm2-65c-65-40-177-44-242-24-10 3-21-2-24-13s2-21 13-24c77-23 200-18 276 29 9 6 11 17 5 26s-17 11-26 6z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -47,7 +49,7 @@ export default function TupanMarkesPage() {
         />
 
         {/* Descrição */}
-        <p className="text-lg sm:text-xl text-gray-700 text-justify leading-relaxed max-w-6xl mx-auto mb-12 px-2">
+        <p className="text-lg sm:text-xl text-gray-700 text-justify leading-relaxed max-w-4xl mx-auto mb-12 px-2">
           <strong className="text-orange-600">Tupan Markes</strong> é sinônimo de presença de palco, música boa e carisma! Com um repertório eclético e um show pra cima que contagia o público do início ao fim, Tupan vem conquistando cada vez mais espaço na cena musical. Seu sucesso “Maria Fifi” já ultrapassou 300 mil players no Spotify, enquanto o Reels da música “Sentando no Colo do Pai” explodiu com mais de 1 milhão de visualizações no Instagram. Um artista completo, que mistura talento, versatilidade e energia em cada apresentação.
         </p>
 
@@ -73,7 +75,7 @@ export default function TupanMarkesPage() {
           ))}
         </div>
 
-        {/* Vídeos YouTube */}
+        {/* Clipes YouTube */}
         <h2 className="text-2xl font-semibold mb-4">Clipes no YouTube</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div>
@@ -101,7 +103,7 @@ export default function TupanMarkesPage() {
           <h2 className="text-2xl font-semibold mb-4">🎵 Discografia</h2>
           <p className="text-lg text-gray-700 mb-4">Confira as músicas de Tupan Markes no Spotify:</p>
           <a
-            href="https://open.spotify.com/intl-pt/artist/5d4vrz2uodz6kGueGwABnJ?si=kVL9cuU3SLmjbWmhOpWO3w"
+            href="https://open.spotify.com/intl-pt/artist/5d4vrz2uodz6kGueGwABnJ"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold"
