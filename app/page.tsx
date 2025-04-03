@@ -1,129 +1,170 @@
 'use client'
 
 import React from 'react'
-import { Phone, Mail, Instagram, Youtube, Play } from 'lucide-react'
-import Link from 'next/link'
+import { Play } from 'lucide-react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
-export default function TupanMarkesPage() {
+export default function Home() {
+  const noticias = [
+    {
+      imagem: '/imagens/materias/noticia_01.png',
+      link: 'https://radarcapixaba.com.br/davi-garcindo-da-essencia-do-pagode-ao-impulso-da-cultura-musical-no-sul-do-estado/',
+      titulo: 'Davi Garcindo: Da essência do Pagode ao Impulso da Cultura Musical no Sul do Estado',
+    },
+    {
+      imagem: '/imagens/materias/noticia_02.png',
+      link: 'https://www.youtube.com/watch?v=aCUxyZ7vRL8',
+      titulo: 'Tupan Markes Lança Música no Youtube chamada sentando no colo do pai',
+    },
+    {
+      imagem: '/imagens/materias/noticia_03.png',
+      link: 'https://www.noticiacapixaba.com/banda-santarens-eletrico-promete-agitar-por-onde-passar-e-2025-promete-muita-alegria-e-agitacao-no-es/',
+      titulo: 'Banda Santarens Elétrico promete agitar por onde passar, e 2025 promete muita alegria e agitação no ES',
+    },
+    {
+      imagem: '/imagens/materias/noticia_04.png',
+      link: 'https://www.instagram.com/marata_news/p/DFpn-D6uC8m/',
+      titulo: 'É de Marataízes: ex-vocalista do Bonde do Forró e Djavú é a nova cantora da Banda KS10',
+    },
+    {
+      imagem: '/imagens/materias/noticia_05.png',
+      link: 'https://www.youtube.com/watch?v=aoU8V7s4BvE',
+      titulo: 'Luiz Show Lança Clipe no Youtube com a Música 10 Negativos',
+    },
+  ]
+
+  const artistas = [
+    { nome: 'Tupan Markes', genero: 'Forró / Piseiro', slug: 'tupan-markes' },
+    { nome: 'Banda KS10', genero: 'Axé', slug: 'banda-ks10' },
+    { nome: 'Banda Santarens', genero: 'Forró / Piseiro', slug: 'banda-santarens' },
+    { nome: 'Davi Garcindo', genero: 'Pagode', slug: 'davi-garcindo' },
+    { nome: 'Luiz Show', genero: 'Forró / Piseiro', slug: 'luiz-show' },
+    { nome: 'DJ Robson Leadro', genero: 'Funk', slug: 'dj-robson-leadro' },
+    { nome: 'DJ João Vianna', genero: 'Funk', slug: 'dj-joao-vianna' },
+    { nome: 'Wemerson Araújo', genero: 'Forró / Piseiro', slug: 'wemerson-araujo' },
+  ]
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: false,
+    cssEase: 'linear',
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    ],
+  }
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      <div className="px-4 py-8 max-w-6xl mx-auto">
-
-        {/* Cabeçalho */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-          {/* Logo */}
-          <div className="flex items-center gap-2 justify-center sm:justify-start">
-            <Play className="text-orange-500 w-8 h-8" />
-            <div>
-              <h1 className="text-2xl font-bold leading-none">MARKES</h1>
-              <span className="text-sm text-gray-500">Produção Musical</span>
-            </div>
-          </div>
-
-          {/* Nome do artista */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-orange-600 text-center sm:text-left">
-            Tupan Markes
-          </h1>
-
-          {/* Redes sociais */}
-          <div className="flex justify-center sm:justify-end gap-4">
-            <a href="https://www.instagram.com/tupanmarkes/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800">
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a href="https://www.youtube.com/@tupanmarkes" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800">
-              <Youtube className="w-6 h-6" />
-            </a>
-            <a href="https://open.spotify.com/intl-pt/artist/5d4vrz2uodz6kGueGwABnJ" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 496 512" fill="currentColor">
-                <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121 365c-4 6-11 8-17 4-47-29-106-36-176-20-7 1-14-3-16-10s3-14 10-16c78-18 144-10 198 24 6 4 8 11 4 18zm24-61c-5 8-15 10-22 5-53-33-133-43-196-24-9 3-18-2-21-11s2-18 11-21c75-22 164-12 227 28 8 5 10 15 5 23zm2-65c-65-40-177-44-242-24-10 3-21-2-24-13s2-21 13-24c77-23 200-18 276 29 9 6 11 17 5 26s-17 11-26 6z" />
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/@tupanmarkes" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-800">
-              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 448 512" fill="currentColor">
-                <path d="M448,209.7V127.2c-25.3,0-49.7-5.3-72.4-15.3c-22.3-9.9-42.4-24.1-59.1-41.5c-16.7-17.5-30.2-38-39.8-60.1H256v316.1c0,28.2-22.9,51.2-51.2,51.2c-28.2,0-51.2-22.9-51.2-51.2c0-28.2,22.9-51.2,51.2-51.2c6.1,0,11.9,1.1,17.3,3.1V209.7c-5.7-.8-11.5-1.2-17.3-1.2c-66.2,0-120,53.8-120,120s53.8,120,120,120c66.2,0,120-53.8,120-120v-161.3c18.7,13.3,39.8,23.9,62.1,31.3c22.9,7.5,47.3,11.4,72.4,11.4Z"/>
-              </svg>
-            </a>
-          </div>
+      <header className="flex items-center justify-between p-4 shadow-md sticky top-0 bg-white z-50">
+        <div className="flex items-center gap-2">
+          <Play className="text-orange-500 w-8 h-8" />
+          <h1 className="text-2xl font-bold whitespace-nowrap">MARKES</h1>
+          <span className="text-sm text-gray-500 whitespace-nowrap">Produção Musical</span>
         </div>
+        <nav className="hidden md:flex items-center gap-4 text-sm">
+          <a href="#" className="hover:text-orange-500">Início</a>
+          <a href="#sobre" className="hover:text-orange-500">Sobre</a>
+          <a href="#agenda" className="hover:text-orange-500">Agenda</a>
+          <a href="#videos" className="hover:text-orange-500">Vídeos</a>
+          <a href="#contato">
+            <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg">Contrate</button>
+          </a>
+        </nav>
+      </header>
 
-        {/* Banner */}
-        <img src="/imagens/banner/banner_tupanmarkes.jpg" alt="Banner Tupan" className="w-full h-[256px] object-cover rounded-xl mb-8" />
 
-        {/* Descrição */}
-        <p className="text-lg sm:text-xl text-gray-700 text-justify leading-relaxed max-w-6xl mx-auto mb-12 px-2">
-          <strong className="text-orange-600">Tupan Markes</strong> é sinônimo de presença de palco, música boa e carisma! Com um repertório eclético e um show pra cima que contagia o público do início ao fim, Tupan vem conquistando cada vez mais espaço na cena musical. Seu sucesso “Maria Fifi” já ultrapassou 300 mil players no Spotify, enquanto o Reels da música “Sentando no Colo do Pai” explodiu com mais de 1 milhão de visualizações no Instagram. Um artista completo, que mistura talento, versatilidade e energia em cada apresentação.
-        </p>
+      <section className="text-center py-32 px-4 bg-orange-100">
+        <h2 className="text-5xl font-bold mb-4">A música que nos move</h2>
+        <p className="text-xl text-gray-600 mb-8">Produzindo talentos e shows inesquecíveis</p>
+        <a href="#artistas">
+          <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg rounded-xl">Conheça nossos artistas</button>
+        </a>
+      </section>
 
-        {/* Reels Instagram */}
-        <h2 className="text-2xl font-semibold mb-4">Reels do Instagram</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {['reel1', 'reel2', 'reel3', 'reel4'].map((reel, index) => (
+      <section className="bg-orange-50 py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-3xl font-bold text-center mb-8">📰 Notícias da Markes Produção Musical</h3>
+          <Slider {...sliderSettings}>
+            {noticias.map((item, index) => (
+              <div key={index} className="px-2">
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={item.imagem}
+                    alt="Notícia"
+                    className="rounded-xl shadow-lg w-full h-64 object-cover transition-transform duration-300 hover:scale-105 active:scale-105"
+                  />
+                  <p className="text-sm mt-2 font-semibold text-center text-gray-700">{item.titulo}</p>
+                </a>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+
+      <section id="artistas" className="py-20 px-4 max-w-6xl mx-auto">
+        <h3 className="text-4xl font-bold text-center mb-12">🎤 Nossos Artistas</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {artistas.map((artista, index) => (
             <a
-              href="https://www.instagram.com/tupanmarkes/"
               key={index}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/artistas/${artista.slug}`}
+              className="aspect-[9/16] bg-gray-100 rounded-xl shadow hover:shadow-lg p-4 flex flex-col justify-end items-center text-center transition-transform duration-300 hover:scale-105 active:scale-105 hover:bg-orange-50"
             >
-              <video
-                src={`/imagens/reels/tupan_markes/${reel}.mp4`}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full aspect-[9/16] rounded-xl object-cover"
-              />
+              {artista.slug === 'tupan-markes' ? (
+                <img
+                  src="/imagens/artistas/Tupan_Markes.jpg"
+                  alt="Tupan Markes"
+                  className="w-full h-full object-cover rounded mb-4"
+                />
+              ) : (
+                <div className="w-full h-full bg-gray-300 flex items-center justify-center rounded mb-4">
+                  <span className="text-center font-bold text-xl text-gray-600">{artista.nome}</span>
+                </div>
+              )}
+              <h4 className="text-lg font-semibold mb-1 text-orange-600 hover:underline">{artista.nome}</h4>
+              <p className="text-sm text-gray-500">{artista.genero}</p>
             </a>
           ))}
         </div>
+      </section>
 
-        {/* Clipes YouTube */}
-        <h2 className="text-2xl font-semibold mb-4">Clipes no YouTube</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div>
-            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/aCUxyZ7vRL8" title="Sentando no Colo do Pai" allowFullScreen />
-            <p className="text-center mt-2 font-semibold">Sentando no Colo do Pai</p>
-          </div>
-          <div>
-            <iframe className="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/waRTS4aQYRU" title="Eu Amo Piúma" allowFullScreen />
-            <p className="text-center mt-2 font-semibold">Eu Amo Piúma</p>
-          </div>
-        </div>
+      <section id="contato" className="text-center py-20 px-4 bg-gray-100">
+        <h3 className="text-4xl font-bold mb-4">Quer contratar um show?</h3>
+        <p className="text-lg mb-6 text-gray-600">Fale com nossa equipe pelo WhatsApp ou e-mail</p>
+        <a href="https://wa.me/5528999338730" target="_blank" rel="noopener noreferrer">
+          <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 text-lg rounded-xl font-semibold">Fale conosco</button>
+        </a>
+      </section>
 
-        {/* Discografia */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-semibold mb-4">🎵 Discografia</h2>
-          <p className="text-lg text-gray-700 mb-4">Confira as músicas de Tupan Markes no Spotify:</p>
-          <a
-            href="https://open.spotify.com/intl-pt/artist/5d4vrz2uodz6kGueGwABnJ"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg text-lg font-semibold"
-          >
-            Ouvir no Spotify
-          </a>
-        </div>
+      <footer className="bg-gray-900 text-gray-300 py-10 px-4 text-center">
+        <p className="text-sm">© {new Date().getFullYear()} Markes Produção Musical</p>
+      </footer>
 
-        {/* Contato */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Contato para shows</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <a href="https://wa.me/5528999338730" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg">
-              <Phone className="w-5 h-5" /> WhatsApp
-            </a>
-            <a href="mailto:markesproducaomusical@gmail.com" className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl text-lg">
-              <Mail className="w-5 h-5" /> E-mail
-            </a>
-          </div>
-        </div>
-
-        {/* Voltar */}
-        <div className="text-center pb-10">
-          <Link href="/" className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg">
-            Voltar à página inicial
-          </Link>
-        </div>
-
-      </div>
+      <a
+        href="https://wa.me/5528999338730"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110 animate-bounce"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          className="w-8 h-8"
+          fill="white"
+        >
+          <path d="M380.9 97.1C339 55.3 284.7 32 224.6 32C103.2 32 0.5 134.8 0.5 256.2c0 45.4 11.8 89.6 34.2 128.5L0.1 480l98.7-33.1c36.4 19.9 77.4 30.4 119 30.4h0.1c121.3 0 224.1-102.8 224.1-224.2 0.1-60-23.3-116.2-65.1-155zM224.6 438.6c-35.2 0-69.8-9.4-100-27.1l-7.2-4.2-58.6 19.7 19.4-57-4.7-7.3c-20.8-32.6-31.7-70.3-31.7-108.5 0-111 90.5-201.6 201.7-201.6 53.8 0 104.3 20.9 142.3 58.8 37.9 37.9 58.8 88.4 58.7 142.3 0 111.1-90.6 201.9-201.9 201.9zm101.4-138.4c-5.6-2.8-33.1-16.3-38.3-18.2-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.4 18.2-17.6 21.9-3.2 3.7-6.5 4.2-12.1 1.4-33.1-16.5-54.8-29.5-76.6-66.6-5.8-10 5.8-9.3 16.5-30.9 1.8-3.7 0.9-6.9-0.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-0.2-6.9-0.2-10.5-0.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.4s19.9 53.9 22.6 57.6c2.8 3.7 38.9 59.4 94.3 83.3 13.2 5.7 23.4 9.1 31.4 11.6 13.2 4.2 25.2 3.6 34.7 2.2 10.6-1.6 33.1-13.5 37.8-26.6 4.6-13.1 4.6-24.3 3.2-26.5-1.2-2.3-5.1-3.7-10.7-6.5z" />
+        </svg>
+      </a>
     </div>
   )
 }
