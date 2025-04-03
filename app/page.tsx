@@ -61,7 +61,7 @@ export default function TupanMarkesPage() {
       </div>
 
       {/* TEXTO DESTAQUE */}
-      <div className="max-w-3xl mx-auto px-4 mb-10 text-justify">
+      <div className="max-w-3xl mx-auto px-6 mb-10 text-justify">
         <h2 className="text-orange-600 text-lg font-bold text-center mb-4">
           Tupan Markes é sinônimo de presença de palco, música boa e carisma!
         </h2>
