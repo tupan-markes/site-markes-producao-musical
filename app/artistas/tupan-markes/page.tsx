@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Phone, Mail, Instagram, Youtube, Play } from 'lucide-react'
+import { Phone, Mail, Instagram, Youtube } from 'lucide-react'
 import Link from 'next/link'
 
 export default function TupanMarkesPage() {
